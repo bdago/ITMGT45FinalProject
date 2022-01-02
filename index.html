@@ -1,0 +1,24 @@
+{% include "header.html" %}
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}"/>
+<div class="content-area">
+    <div class="column-1">
+        <h1>Connect with<br>people around you!</h1>
+        <form action="" method="post">         
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Enter Full Name" name="fullname" required>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <input type="text" placeholder="Enter Password" name="password" required>
+            <p class="password-forgot">Forgot Password?</p>
+            {% if invalid %}
+                <div class="alert">
+                User already exists! Try again loser.
+                </div>
+            {% endif %}
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <div class="column-2">
+        <img width="80%" src="https://media.gettyimages.com/photos/serious-young-businessman-working-in-office-picture-id916362078?s=2048x2048"/>
+    </div>
+</div>
+{% include "footer.html" %}

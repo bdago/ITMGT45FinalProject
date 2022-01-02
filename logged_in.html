@@ -1,0 +1,8 @@
+{% include "header.html" %}
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/loggedin.css') }}"/>
+<div class="content-area">
+    <h1 class="message">Hey {{ userinput["fullname"] }}!</h1>
+    <p>Welcome to your home page! We're working on some key features! Come back soon!</p>
+    <button  onclick="location.href='/logout'">Sign Out</button>    
+</div>
+{% include "footer.html" %}

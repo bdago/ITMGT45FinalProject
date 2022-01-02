@@ -1,0 +1,16 @@
+{% include "header.html" %}
+<div style="margin: 40px 0px;" class="content-area">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}"/>
+    <form action="" method="post">   
+        <label for="fname">Username:</label>
+        <input type="text" name="username" value={{ userinput["username"] }}><br><br>
+        <label for="fname">Email:</label>
+        <input type="text" name="email" value={{ userinput["email"] }}><br><br>
+        <label for="lname">Password:</label>
+        <input type="text" name="password" value={{ userinput["password"] }}><br><br>
+        <button>Update</button>
+        
+    </form>
+</div>
+
+{% include "footer.html" %}

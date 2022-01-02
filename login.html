@@ -1,0 +1,15 @@
+{% include "header.html" %}
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}"/>
+<form action="" method="post">         
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Password" name="password" required>
+    <p class="password-forgot">Forgot Password?</p>
+    {% if invalid %}
+        <div class="alert">
+        Wrong password or email!
+        </div>
+    {% endif %}
+    <button type="submit">Log In</button>
+    
+</form>
+{% include "footer.html" %}

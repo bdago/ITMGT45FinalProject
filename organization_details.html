@@ -1,0 +1,10 @@
+{% include "header.html" %}
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/org_details.css') }}"/>
+<div class="content-area">
+        <h1 class="longName"> {{ organization["longname"] }}</h1>
+        <p class="details"> Name: {{ organization["name"] }} </p>
+        <p class="details"> Description: {{ organization["description"]}} </p>
+        <p class="details"> Past Events: Feature to be Made </p>
+        <a class="back" href="/organizations">Back</a>
+    </div>
+{% include "footer.html" %}
